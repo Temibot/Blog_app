@@ -1,0 +1,96 @@
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Landing Page</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+</head>
+<body>
+    <h1>Blog Landing Page can be removed later</h1>
+    <header>
+        <div class="Logo">
+            <center><h2>Blogs</h2></center>
+        </div>
+
+        <br>
+        <div class="nav-item">
+            <!-- <a href="{{url_for('index')}}">Home</a>
+            
+            <a href="{{url_for('register')}}">Register</a>
+
+            <a href="{{url_for('login')}}">Login</a>
+            <a href="">Logout</a> -->
+
+            <!-- <a href="/">Home</a>
+            <a href="/">Register</a>
+            <a href="/">Login</a>
+            <a href="/">Logout</a>
+        </div>
+    </header>
+
+    <main class="container">
+      
+    </main>
+
+    <footer>
+        <p class="footer">
+            &copy: AppName <script>
+                document.write(new Date().getFullYear())
+            </script>
+        </p>
+    </footer>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base HTML</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+</head>  
+<body>
+    <div class="Logo"><h1>Blog App</h1></div>
+    <div>
+        <ul>  
+            <li><a class="active" href="{{url_for('index')}}">Home</a></li>  
+            <li><a href="{{url_for('register')}}">Signup</a></li>  
+            <li><a href="{{url_for('login')}}">Login</a></li>  
+            <li><a href="{{url_for('logout')}}">Logout</a></li> 
+            <!-- <li><a href="#">Post</a></li>  TO BE REMOVED LATER -->
+            <li><a href="{{url_for('contact')}}">Contact</a></li>
+            <li><a href="{{url_for('about')}}">About</a></li>
+        </ul> 
+           
+
+    </div> 
+    <br> 
+    <main class="container">
+        {%  block content %}
+
+
+        {% endblock content %}
+    </main>
+    <div class="blog-body"> 
+        <!-- <label for="author">AuthorHere</label>
+        <p>timestamp</p>
+        <label for="">Blog Post</label>
+        <textarea name="" id="" cols="50" rows="10" placeholder="Type your blog here..."></textarea>
+        <br>
+        <button>Edit</button> -->
+        <!-- <script>
+            document.write(new Date().getDate)
+        </script> -->
+    
+    </div>    
+
+</body>
+</html>
+
+

@@ -1,0 +1,54 @@
+
+    
+<!-- <form action="" method="post"> -->
+    <!-- <label for="">Blog Post</label>
+    <input type="text">
+    <textarea name="" id="" cols="30" rows="10">Type your blog here?</textarea> -->
+
+    <!-- <label for="author">AuthorHere</label>
+    <p>timestamp - NO NEED</p>
+    <label for="">Blog Post</label>
+    <textarea name="" id="" cols="50" rows="10" placeholder="Type your blog here...?"></textarea>
+    <br>
+    <button>Edit</button> -->
+<!-- </form> -->
+     <!-- AT SOMEWHERE, LET THERE BE A WAY TO CONTINOUSLY ADD BLOG POSTS FROM ANY USER TO THE GENERAL INDEX PAGE.. -->
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <span class=""><h1>{% block title %} Posts {%  endblock %}</h1></span>
+    <div class="content">
+        {% for blog in blogs %}
+            <div class="post">
+                <p><b>{{ blog.id}}</b></p>
+                <p>{{blog.date_posted}}</p>
+                
+                <!-- <p><b>#{{ post.id}}</b></p> -->
+                <b></b>
+                <p class="title">
+                    <p>{{ blog.title }}</p>
+
+                    <!-- <a href="#">{{ post.title }}</a> -->
+                </p>
+                <b></b>
+                <div class="content">
+                    <p>{{blog.content}}</p>
+                    <!-- <p>Contnen here</p> -->
+                    
+                </div>
+                <table>
+                    <!-- <thead><th></th></thead> -->
+                    <tbody>
+                        <tr>
+                            <td><a href="{{blog.id}}/edit">Update</a></td>
+                            <td><a href="{{blog.id}}/delete">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+            </div>
+            {% endfor %}
+    </div>
+{% endblock content %}

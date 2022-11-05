@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="register">
+        <h2><center>Register Here</center></h2>
+    </div>
+    <div>
+        <center>
+            <form action="" method="post">
+                <div>
+                    <label for="first_name">First name</label>
+                    <input type="text" name="first_name" placeholder="First name">
+                </div>
+                <div>
+                    <label for="last_name">Last name</label>
+                    <input type="text" name="last_name" placeholder="Last name">
+                </div>
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" placeholder="Your preferred username..">
+                </div>
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" name="age" class="form-control" id="" placeholder="Age">
+                </div>
+                
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" id="" placeholder="email">
+                </div>
+                    <label for="Password">Password</label>
+                    <input type="password" name="password" class="form-control" id="">
+                <div>
+                    <label for="confirm">Confirm password</label>
+                    <input type="password" name="confirm" class="form-control" id="">
+                </div>
+
+                <button>REGISTER</button>
+
+                <div class="form-group">
+                    <small>
+                     Already have an account?, <a href="{{url_for('login')}}">Login to Account</a>
+                    </small>
+                 </div>
+            </form>
+        </center>
+    </div>
+
+{% endblock content %}
